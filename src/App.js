@@ -5,31 +5,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 
 function App() {
-    return ( <
-        div className = "App" >
-        <
-        Router >
-        <
-        Switch >
-        <
-        Route path = '/signin' >
-        <
-        Login / >
-        <
-        /Route> <
-        Route path = '/signup' >
-        <
-        SignUp / >
-        <
-        /Route> <
-        Route path = '/' >
-        <
-        Dashboard / >
-        <
-        /Route> <
-        /Switch> <
-        /Router> <
-        /div>
+    return (<div className="App" >
+        <Router >
+            <Switch >
+                <Route path='/signin' >
+                    <Login />
+                </Route>
+                <Route path='/signup' >
+                    <SignUp />
+                </Route>
+                <Route path='/' >
+                    <Dashboard />
+                </Route>
+            </Switch>
+        </Router>
+    </div>
     );
 }
 
