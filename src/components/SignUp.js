@@ -13,7 +13,7 @@ export default function Login() {
 
     return (
         <div className='login-page'>
-            <div className='registration-card' style={{ height: '470px' }}>
+            <div className='registration-card' style={{ height: '70vh' }}>
                 <h2>Sign Up</h2>
                 <p style={{ color: '#e5e5e5' }}>Create your account</p>
                     <div>
