@@ -41,11 +41,11 @@ export default function Login() {
                 <h2>Sign in</h2>
                 <p style={{ color: '#e5e5e5' }}>Sign in to manage your accaunt</p>
                 <div>
-                    <HiOutlineMail className='input-icon' style={{ position: 'absolute', fontSize: '25px', padding: '10px', marginTop: '20px' }} />
+                    <HiOutlineMail className='input-icon' />
                     <input type='text' className='login-input' placeholder='Email' onChange={handleEmail} />
                 </div>
                 <div>
-                    <MdVpnKey className='input-icon' style={{ position: 'absolute', fontSize: '25px', padding: '10px', marginTop: '20px' }} />
+                    <MdVpnKey className='input-icon' />
                     <input type={isPasswordHidden ? 'password' : 'text'} className='login-input' placeholder='Password' onChange={handlePassword} />
                 </div>
                 <div className="remember-me">
@@ -57,7 +57,7 @@ export default function Login() {
                 <button className='login-btn' onClick={handleSubmit}>Sign in</button>
             </div>
             <div className='under-card'>Don't you have an account? <Link to='/signup' style={{ textDecoration: 'none', color: 'cyan' }}>Sign up</Link></div>
-            <div className='under-card' style={{ width: '150px' }}>Forgot password? </div>
+            <div className='under-card' style={{ width: '150px' }}><Link to='/forgotpassword' style={{color:'cyan', textDecoration:'none'}}>Forgot password?</Link> </div>
 
         </div >
     )
