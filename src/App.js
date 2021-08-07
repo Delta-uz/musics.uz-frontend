@@ -1,6 +1,7 @@
 import './App.css';
 import Login from './components/login';
 import SignUp from './components/SignUp'
+import ResetPassword from './components/ResetPassword';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import ForgotPassword from './components/ForgotPassword';
@@ -21,6 +22,9 @@ function App() {
                 <Switch >
                     <Route path='/forgotpassword'>
                         <ForgotPassword  isDarkTheme={isDarkTheme} />
+                    </Route>
+                    <Route path='/resetpassword'>
+                        <ResetPassword  isDarkTheme={isDarkTheme} />
                     </Route>
                     <Route path = '/signin' >
                         <Login isDarkTheme={isDarkTheme} />
