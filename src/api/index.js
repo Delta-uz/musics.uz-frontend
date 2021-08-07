@@ -1,7 +1,9 @@
 import authentication from "./authentication";
+import musics from "./musics";
 
 const api = {
-    authentication
+    authentication,
+    musics
 };
 
 export default api;
