@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { HiOutlineMail } from 'react-icons/hi'
 import { MdVpnKey } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import api from '../api';
 
-export default function Login() {
+
+export default function Login(props) {
+    const isDarkTheme = props.isDarkTheme
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [isPasswordHidden, setIsPasswordHidden] = React.useState(true);
@@ -36,28 +38,28 @@ export default function Login() {
     }
 
     return (
-        <div className='login-page'>
-            <div className='registration-card'>
+        <div className={isDarkTheme?'login-page-light' : 'login-page-dark'}>
+            <div className={isDarkTheme? 'registration-card-light':'registration-card-dark'}>
                 <h2>Sign in</h2>
-                <p style={{ color: '#e5e5e5' }}>Sign in to manage your accaunt</p>
+                <p style={{ color: isDarkTheme?'#000000':'#e5e5e5' }}>Sign in to manage your accaunt</p>
                 <div>
                     <HiOutlineMail className='input-icon' />
-                    <input type='text' className='login-input' placeholder='Email' onChange={handleEmail} />
+                    <input type='text' className={isDarkTheme? 'login-input-light':'login-input-dark'} placeholder='Email' onChange={handleEmail} />
                 </div>
                 <div>
                     <MdVpnKey className='input-icon' />
-                    <input type={isPasswordHidden ? 'password' : 'text'} className='login-input' placeholder='Password' onChange={handlePassword} />
+                    <input type={isPasswordHidden ? 'password' : 'text'} className={isDarkTheme? 'login-input-light':'login-input-dark'} placeholder='Password' onChange={handlePassword} />
                 </div>
-                <div className="remember-me">
+                <div className='remember-me'>
                     <input type='checkbox' onChange={togglePasswordVisibility} /> Show password
                 </div>
                 <div className='remember-me'>
                     <input type='checkbox' /> Remember me
                 </div>
-                <button className='login-btn' onClick={handleSubmit}>Sign in</button>
+                <button className={isDarkTheme? 'login-btn-light':'login-btn-dark'} onClick={handleSubmit}>Sign in</button>
             </div>
-            <div className='under-card'>Don't you have an account? <Link to='/signup' style={{ textDecoration: 'none', color: 'cyan' }}>Sign up</Link></div>
-            <div className='under-card' style={{ width: '150px' }}><Link to='/forgotpassword' style={{color:'cyan', textDecoration:'none'}}>Forgot password?</Link> </div>
+            <div className='under-card'>Don't you have an account? <Link to='/signup' style={{ textDecoration: 'none', color: isDarkTheme?'black':'cyan' }}>Sign up</Link></div>
+            <div className='under-card' style={{ width: '150px' }}><Link to='/forgotpassword' style={{color:isDarkTheme?'black':'cyan', textDecoration:'none'}}>Forgot password?</Link> </div>
 
         </div >
     )

@@ -4,23 +4,32 @@ import SignUp from './components/SignUp'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import ForgotPassword from './components/ForgotPassword';
+import { ThemeContext } from './components/ThemeContext';
+import { useState } from 'react';
 
 function App() {
+
+    const [isDarkTheme, SetTheme] = useState(true)
+    function changeTheme(){
+        SetTheme(!isDarkTheme)
+    }
+
     return ( 
         <div className = "App" >
+            <button onClick={changeTheme}>theme</button>
             <Router >
                 <Switch >
                     <Route path='/forgotpassword'>
-                        <ForgotPassword />
+                        <ForgotPassword  isDarkTheme={isDarkTheme} />
                     </Route>
                     <Route path = '/signin' >
-                        <Login />
+                        <Login isDarkTheme={isDarkTheme} />
                     </Route> 
                     <Route path = '/signup' >
-                        <SignUp />
+                        <SignUp  isDarkTheme={isDarkTheme} />
                     </Route> 
                     <Route path = '/' >
-                        <Dashboard />
+                        <Dashboard  isDarkTheme={isDarkTheme} />
                     </Route> 
                 </Switch> 
             </Router> 
