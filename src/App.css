@@ -3,7 +3,7 @@ body {
     margin: 0px;
 }
 
-.login-page {
+.login-page-dark {
     background: linear-gradient( 130deg, black 40%, rgb(29, 171, 188));
     width: 100%;
     height: 100vh;
@@ -11,8 +11,16 @@ body {
     left: 0px;
     top: 0px;
 }
+.login-page-light {
+    background: linear-gradient( 130deg, #F4F9F9 40%, #A4EBF3);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
 
-.registration-card {
+.registration-card-dark {
     width: 300px;
     height: 60vh;
     border: 1px solid white;
@@ -29,7 +37,23 @@ body {
     border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
-.login-input {
+.registration-card-light {
+    width: 300px;
+    height: 60vh;
+    border: 1px solid #AAAAAA;
+    border-radius: 15px;
+    color: black;
+    padding: 70px 5% 20px 5%;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 8px 32px 0 white;
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+}
+
+.login-input-dark {
     background: rgba( 0, 0, 0, 0.2)!important;
     transition: all ease-out .3s;
     background-color: black;
@@ -42,12 +66,25 @@ body {
     margin-top: 20px;
 }
 
-.login-input:focus {
+.login-input-light {
+    background: rgba(255,255,255, 0.2) !important;
+    transition: all ease-out .3s;
+    background-color: white;
+    border: #AAAAAA solid 1px;
+    border-radius: 5px;
+    width: calc(100% - 55px);
+    height: 40px;
+    color: black;
+    padding-left: 55px;
+    margin-top: 20px;
+}
+
+.login-input-dark:focus {
     border-color: cyan;
     outline: none;
 }
 
-.login-btn {
+.login-btn-dark {
     background: linear-gradient(to left bottom, blue, #345cc9);
     color: white;
     width: calc(100%);
@@ -56,6 +93,17 @@ body {
     border: blue solid 1px;
     border-radius: 5px;
 }
+.login-btn-light {
+    background: linear-gradient(to left bottom, #CCF2F4, #A4EBF3);
+    color: black;
+    width: calc(100%);
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+
 
 .remember-me {
     margin-top: 20px;
@@ -77,6 +125,7 @@ body {
     margin-top: 20px;
 }
 
+
 input[type='checkbox'] {
     transform: scale(1.2);
     opacity: 0.15;
@@ -84,4 +133,37 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked {
     opacity: 9;
+}
+
+.LeftMenu-dark{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(16, 25, 40);
+    color: white;
+    padding-top: 0px;
+}
+.menu-header-dark{
+    height: 13vh;
+    text-align: center;
+    font-weight: bold;
+}
+.under-manu-header-dark{
+    padding-left: 30px;
+}
+.menu-btn-dark{
+    width: 100%;
+    padding: 10px 30px 10px 30px;
+    text-align: start;
+    font-size: 16px;
+    border: rgb(16, 25, 40) solid 5px;
+    background-color: rgb(16, 25, 40);
+    color: rgb(127, 134, 143);
+}
+.menu-btn-active-dark{
+    border-left: cyan 5px solid;
+}
+.left-menu-icon-dark{
+    font-size: 20px;
+    height: 20px;
 }
